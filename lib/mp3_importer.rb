@@ -6,3 +6,7 @@ def intialize (path)
 end
 
 def files 
+  def files
+    @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
+  end
+  
